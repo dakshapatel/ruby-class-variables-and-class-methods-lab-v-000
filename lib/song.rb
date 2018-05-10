@@ -47,7 +47,17 @@ def self.genre_count
 def self.artist_count
   #binding.pry
 
-  @@artists.inject(Hash.new(0)) {|total, i| total[i] =+ 1; total}
+  artist_count = {}	
+      @@artists.each do |artist|	
+        if artist_count[artist]	
+          artist_count[artist] += 1 	
+        else	
+          artist_count[artist] = 1	
+        end	
+      end	
+      artist_count	
+    end	
+
 
 end
 end
