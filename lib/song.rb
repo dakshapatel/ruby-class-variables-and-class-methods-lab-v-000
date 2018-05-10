@@ -46,6 +46,6 @@ def self.genre_count
 
 def self.artist_count
   artist_count = {}
-
+  artist_count.inject(Hash.new(0)) {|h, x| h[x] =+ 1: h}
 end
 end
