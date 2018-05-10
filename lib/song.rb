@@ -48,5 +48,5 @@ def self.artist_count
   #binding.pry
 
   @@artists.inject(Hash.new(0)) {|total, i| total[i] =+ 1; total}
-end
+
 end
