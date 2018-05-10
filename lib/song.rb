@@ -33,7 +33,7 @@ def self.genre_count
   genre_count = {}
 
   @@genres.each do |genre|
-  
+
     if genre_count[genre]
         genre_count[genre] += 1
     else genre_count[genre] = 1
@@ -45,6 +45,7 @@ def self.genre_count
 
 
 def self.artist_count
+  binding.pry
   artist_count = {}
   artist_count.inject(Hash.new(0)) {|h, x| h[x] =+ 1; h}
 end
